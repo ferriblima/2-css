@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+    <!-- Importation links of the google font to use it -->
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet"> 
+    
+    <title>2 - CSS Tutorial</title>
+
+    <style type="text/css">
+
+    .second_style{
+
+    color: green;
+
+    }
+    #color{
+        color: #BF00FF;
+    }
+    #background-color{
+        background-color: #BF00FF;
+    }
+    .demonstration-div{
+        background-color: #81DAF5;
+        width: 250px;
+        height: 250px;
+    }
+    .paragraph-div{
+        position: relative;
+        left: 30px;
+    }
+    body { 
+        margin: 0; 
+        padding: 0; 
+    }
+    /* Borders */
+    .border-square {
+        width: 200px; 
+        height: 200px; 
+        float: left;
+        margin: 10px 40px 10px 40px;
+    }
+    #red_block {
+        background-color: red; 
+        border:10px pink solid;
+    }
+    #blue_block {
+        background-color: blue;
+        border-style: ridge solid dotted dashed;
+        border-color: blue tomato palevioletred yellow;
+        border-width: 10px 5px 15px 2px;
+    }
+    #green_block {
+        background-color: green;
+        border-radius: 20px;
+        
+    }
+
+    /* Fonts */
+    #font1 {
+        font-size: 200%;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    #font2-googlefont {
+        font-size: 200%;
+        font-family: 'Glory', sans-serif;
+
+    }
+    </style>
+
+    </head>
+    <body>
+
+        <h3>----- What is CSS? -----</h3>
+        <p>CSS means Cascading Style Sheets</p>
+
+        <p>It can be used in three ways</p>
+        <ol>
+            <li>Inline CSS. Ex: <span style="color: red;">&lt;span style="color: red;">&lt;/span></span></li>
+            <li class="second_style">Internal or Embedded CSS. That creates a &lt;style type="text/css">&lt;/style> tag in the &lt;head> (we can put it anywhere but is a practice to put in the head.</li>
+            <li>External CSS. That creates a &lt;style> tag in anothe file and it is imported in the html file.</li>
+        </ol>
+
+        <p>There are three ways to link the internal and external css to one text</p>
+        <ol>
+            <li>Through the tag. p { second-style: green; }</li>
+            <li>Through the class. .name-of-the-class { second-style: green; }</li>
+            <li>Through the id. #name-of-the-id { second-style: green; }</li>
+        </ol>
+
+        <p>When use id and when use class</p>
+        <ol>
+            <li>IDs should only be used a single time (only one instance of a specific id in the entire thing).</li>
+            <li>Classes are not specific so can be used in all the pages.</li>
+        </ol>
+        
+        <p>What is a &lt;div>? What is used for?</p>
+        <div class="demonstration-div">
+            <p>It's a Division, and is used to give styles to groups of code.</p>
+        </div>
+        <hr>
+        <h3>----- Colors -----</h3>
+    
+        <p>We can define the color of the text with <span id="color">color:</span> or the color of the background with <span id="background-color">background-color:</span></p>
+        <p>Site with a lot of colors and HEX code: <a href="https://html-color-codes.info/">https://html-color-codes.info/</a></p>
+        <p>Site with a lot of colors and HEX code: <a href="https://htmlcolorcodes.com/">https://htmlcolorcodes.com/</a></p>
+        <p>To steal colors of others websites, we can use the google chrome plug-in: <a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp">Color Zilla</a></p>
+        <p>To define opacity of everything we use the <span style="background-color: red;opacity: 50%;">opacity:</span> 
+         and to define the opacity only of the background we use <span style="background:rgba(180,40,140,0.2);">(background:rgba(180,40,140,0.2);</span>.</p>
+        
+        <hr>
+        <h3>----- Positioning -----</h3>
+
+        <p>There are three big types of positioning:</p>
+        <ol>
+            <li>
+                float: right, left, ...;
+            </li>
+            <li>
+                position: absolute, fixed, relative, static, ...;
+            </li>
+            <li>
+                left:; right:; top:; bottom:;
+            </li>
+        </ol>
+
+        <h4>Float</h4>
+        <div class="paragraph-div">
+            <p>float: style to make it flows with the borders of the upper container.</p>
+            <p style="float:left; background-color: #BF00FF;">float:left;</p>
+            <p style="float:left; background-color: #BFFFAA;">float:left;</p>
+            <p style="float:right; background-color: #BF00FF;">float:right;</p>
+            <p style="float:right; background-color: #BFFFAA;">float:right;</p>
+
+            <div style="clear:both;">
+                <p><strong>clear: style that ignore the floats of other styles around or in the chosen side.</strong></p>
+                <p>Obs.: A style inside other anulates the other.</p>
+            </div>
+            <p>Float right</p>
+        </div>
+        
+        <h4>Position</h4>
+        <div class="paragraph-div">
+            <p>The position sets what is the reference of the block.</p>
+            <strong>- position: relative;</strong> says that it will move relatively the position it was. It suffers interference of other blocks.
+            <p style="position: relative; left: 100px; top: 100px; z-index: 1;" class="demonstration-div">position: relative; left: 100px; top: 100px</p>
+            <p style="position: relative; z-index: 2;";>Look that it moved 100px from the left and top border where it should be.</p>
+            <div style="position: relative; top: 60px;">
+                <div>
+                    <p><strong>- position: absolute;</strong> says that it will move relatively the position of upper div. It ignores the other blocks. It doesn't flow with the page.</p>
+                    <div class="demonstration-div" style="position: absolute; left: 1000px">
+                        <p>position: absolute; left: 1000px</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>- position: fixed;</strong> says that it will move relatively the position of upper div. It ignores the other blocks. It stays in the same position as the page moves.</p>
+                    <div class="demonstration-div" style="position: fixed; top: 0; right: 0;">
+                        <p>position: fixed; top: 0; right: 0;</p>
+                    </div>
+                    <p>It must be used with top/bottom and right/left. <br>Chats and menus use this a lot.</p>
+                </div>
+                <div>
+                    <h4>How bring thing to the front?</h4>
+                    <p>The z-index: is used for this cases. The style with the greatest z-index stays in the front.<br>The z-index only work in positioned elements.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="position: relative; top: 60px;">
+            <hr>
+            <h3>----- Margins -----</h3>
+            <p>The difference between the positioning and the margin is that when we use the margin the blank space appears around all the block.</p>
+            
+            <div>
+                <div style="width: 2000px; height: 20px; background-color: #81DAF5;">
+                </div>
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <p style="margin: 100px 70px 40px 10px; background-color:blue; width:300px; height: 100px; float: left;">margin: 100px 70px 40px 10px; background-color:blue; width:300px; height: 100px; float: left;</p>
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <div style="float: left; width: 2000px; height: 20px; background-color: #81DAF5;">
+                </div>
+
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <p style="margin: 50px 20px 50px 20px; background-color:blue; width:300px; height: 100px; float: left;">margin: 50px 20px 50px 20px; background-color:blue; width:300px; height: 100px; float: left;</p>
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <div style="float: left; width: 2000px; height: 20px; background-color: #81DAF5;">
+                </div>
+
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <p style="margin-top: 50px; margin-right: 20px; margin-bottom: 50px; margin-left: 20px; background-color:blue; width:300px; height: 100px; float: left;">margin-top: 50px; margin-right: 20px; margin-bottom: 50px; margin-left: 20px; background-color:blue; width:300px; height: 100px; float: left;</p>
+                <div class="demonstration-div" style="float: left;">
+                </div>
+                <div style="float: left; width: 2000px; height: 20px; background-color: #81DAF5;">
+                </div>
+            </div>
+           
+            <div style="clear:both;"></div>
+                <hr>
+                <h3>----- Padding -----</h3>
+                <p>In portuguese it means <i>preenchimento</i> and is similar to the margin, the difference is that it works inside other blocks.</p>
+                <ul>
+                    <li>margin = works outside the object.</li>
+                    <li>padding = works inside the object.</li>
+                </ul>
+
+                <p style="padding: 50px 30px 15px 5px; background-color:blue; width:300px;">padding: 50px 30px 15px 5px; background-color:blue; width:300px;</p>
+                <p>Obs.: The size of the object (width and height) sums with the paddings to result in the real size.</p>
+            
+            <p
+                >Obs.2: Naturaly, the browsers have a different default margins and paddings applyied to the pages. To remove it we can use a style in all of the &lt;body>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;body { margin: 0; padding: 0; } and p { margin: 0; padding: 0; }
+            </p>
+            <p>We can see the definitions for each browser looking for CSS Reset on google.</p>
+            
+
+            <hr>
+            <h3>----- Margins -----</h3>
+            
+            <div class="border-square" id="red_block">
+                <p>
+                    background-color: red;<br>
+                    border:10px pink solid;
+                </p>
+            </div>
+            <div class="border-square" id="blue_block">
+                <p>
+                    background-color: blue;<br>
+                    border-style: ridge solid dotted dashed;<br>
+                    border-color: blue tomato palevioletred yellow;<br>
+                    border-width: 10px 5px 15px 2px;
+                </p>
+            </div>
+            <div class="border-square" id="green_block">
+                <p>
+                    background-color: green;<br>
+                    border-radius: 20px;
+                </p>
+                <p>*If the border-radius has the half of the width pixels or a value 50%, it becomes a circle</p>
+            </div>
+
+            <p>Fields in the border: style are border: 1px(thickness) black(color) solid(type of the line)</p>
+            <p>Site to find other styles: <a href="https://www.w3schools.com/css/css_border.asp">https://www.w3schools.com/css/css_border.asp</a></p>
+
+            <div style="clear:both;">
+                <hr>
+                <h3>----- Margins -----</h3>
+                <p id="font1">
+                    Example
+                </p>
+
+                <p>Site with fonts - look for <strong>web safe fonts</strong> (fonts that are accepted in most browsers: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">https://www.w3schools.com/cssref/css_websafe_fonts.asp</a></p>
+                <p>Usualy when we are going to choose a font-family, more than one appears as if they were the same. It happens becouse the CSS will use the one that is available in the browser.</p>
+
+                <p>Besides the web safe fonts, we can use <strong>google fonts</strong>. They are found searching google fonts on gooogle: <a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+                <p id="font2-googlefont">
+                    font-size: 200%; font-family: 'Glory', <br>
+                    sans-serif; Plus use the importation links or download the files.
+                </p>                
+            </div>
+
+        </div>
+    </body>
+
+</html>
