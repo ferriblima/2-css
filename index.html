@@ -4,75 +4,89 @@
 
     <head>
     
-    <!-- Importation links of the google font to use it -->
-    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet"> 
-    
-    <title>2 - CSS Tutorial</title>
-
-    <style type="text/css">
-
-    .second_style{
-
-    color: green;
-
-    }
-    #color{
-        color: #BF00FF;
-    }
-    #background-color{
-        background-color: #BF00FF;
-    }
-    .demonstration-div{
-        background-color: #81DAF5;
-        width: 250px;
-        height: 250px;
-    }
-    .paragraph-div{
-        position: relative;
-        left: 30px;
-    }
-    body { 
-        margin: 0; 
-        padding: 0; 
-    }
-    /* Borders */
-    .border-square {
-        width: 200px; 
-        height: 200px; 
-        float: left;
-        margin: 10px 40px 10px 40px;
-    }
-    #red_block {
-        background-color: red; 
-        border:10px pink solid;
-    }
-    #blue_block {
-        background-color: blue;
-        border-style: ridge solid dotted dashed;
-        border-color: blue tomato palevioletred yellow;
-        border-width: 10px 5px 15px 2px;
-    }
-    #green_block {
-        background-color: green;
-        border-radius: 20px;
+        <!-- Importation links of the google font to use it -->
+        <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet"> 
         
-    }
+        <title>2 - CSS Tutorial</title>
 
-    /* Fonts */
-    #font1 {
-        font-size: 200%;
-        font-family: Arial, Helvetica, sans-serif;
+        <style type="text/css">
 
-    }
-    #font2-googlefont {
-        font-size: 200%;
-        font-family: 'Glory', sans-serif;
+            .second_style{
 
-    }
-    </style>
+            color: green;
 
+            }
+            #color{
+                color: #BF00FF;
+            }
+            #background-color{
+                background-color: #BF00FF;
+            }
+            .demonstration-div{
+                background-color: #81DAF5;
+                width: 250px;
+                height: 250px;
+            }
+            .paragraph-div{
+                position: relative;
+                left: 30px;
+            }
+            body { 
+                margin: 0; 
+                padding: 0; 
+            }
+            /* Borders */
+            .border-square {
+                width: 200px; 
+                height: 200px; 
+                float: left;
+                margin: 10px 40px 10px 40px;
+            }
+            #red_block {
+                background-color: red; 
+                border:10px pink solid;
+            }
+            #blue_block {
+                background-color: blue;
+                border-style: ridge solid dotted dashed;
+                border-color: blue tomato palevioletred yellow;
+                border-width: 10px 5px 15px 2px;
+            }
+            #green_block {
+                background-color: green;
+                border-radius: 20px;
+            }
+
+            /* Fonts */
+            #font1 {
+                font-size: 200%;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #font2-googlefont {
+                font-size: 200%;
+                font-family: 'Glory', sans-serif;
+            }
+
+            /* Conditioned Styling */
+            .no-style{
+                text-decoration: none;
+            }
+
+            #link-with-hover:hover{
+                text-decoration: underline;
+            }
+
+            .link-no-style-and-green{
+                text-decoration: none;
+            }
+            .link-no-style-and-green:visited{
+                color:green;
+            }
+
+        </style>
     </head>
-    <body>
+
+    <body style="margin-bottom: 200px;">
 
         <h3>----- What is CSS? -----</h3>
         <p>CSS means Cascading Style Sheets</p>
@@ -265,8 +279,42 @@
                     font-size: 200%; font-family: 'Glory', <br>
                     sans-serif; Plus use the importation links or download the files.
                 </p>                
-            </div>
+            
 
+                <hr>
+                <h3>----- Styles -----</h3>
+                <p>Styles can be used with html tags but is better to use with css to keep the styles following the standard.</p>
+                <p style="font-weight: bold;">Bold</p>
+                <p style="font-style: italic;">Italic</p>
+                <p style="text-decoration: underline;">Underlined</p>
+                <p style="text-decoration: none;">If you don't want to use any decoration, use text-decoration: none; This largely used to remove the underline from links.</p>
+                <a style="text-decoration: none;" href="">This is a non-underlined link. We use style="text-decoration: none;" or a { text-decoration:none; } for all the a tags</a>
+                <p>Link for CSS style text: <a href="https://www.w3schools.com/css/css_text.asp">https://www.w3schools.com/css/css_text.asp</a></p>
+                
+                <hr>
+                <h3>----- Conditioned Styling (hover) -----</h3>
+                <p>It's possible to style things under conditions without using javascript. For example underline the link when the cursor pass over it.</p>
+                <a class="no-style" id="link-with-hover" href="">This is a link with underline hover</a>
+
+                <hr>
+                <h3>----- Text Align -----</h3>
+                <p>The position of the text in the parent element.</p>
+                <div style="width: 400px;">
+                    <p style="text-align: right;">text-align: right;</p>
+                    <p style="text-align: center;">text-align: center;</p>
+                    <p style="text-align: left;">text-align: left;</p>
+                    <p style="text-align: justify;">text-align: justify; <br>- This justify the text with the margins of the page. Lorem ipsum dolor sit amet. Qui quia veniam cum incidunt minus id autem aliquam. Sed magnam aspernatur ut iste harum ea velit voluptas vel sequi illo ut voluptatem quidem ab sunt esse At saepe mollitia. Ab illo magnam aut quisquam totam non nihil neque quo quia expedita.</p>
+                </div>
+
+                <hr>
+                <h3>----- Stylink Links -----</h3>
+                <p></p>
+                <p>Open google in the same tab: <a href="https://google.com" class="no-style" id="link-with-hover">Google</a></p>
+                <p>Open google in a new tab: <a href="https://google.com"  target="_blank" class="no-style" id="link-with-hover">Google target="_blank"</a></p>
+                <p>Open google in a new tab and green after visited (in this case we have to use to idents to the class used, one without :visited and the other with the :visited): <a href="https://google.com"  target="_blank" class="link-no-style-and-green" id="link-with-hover">Google</a></p>
+                <p>To see more classes like this we can search for Pseudo classes links css: <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">https://www.w3schools.com/css/css_pseudo_classes.asp</a></p>
+
+            </div>
         </div>
     </body>
 
