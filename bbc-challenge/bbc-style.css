@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #FFFFFF;
+}
+
+/* TO DO: Change grey colors to white (#DDDDDD to #FFFFFF) */
+
+.width71 {
+    background-color: #99DDAA;
+    width: 71.5%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.menu-first{
+    background-color: #DDDDDD;
+    width: 100%;
+    height: 40.5167px;
+}
+
+.menu-search{
+    background-color: #BB1919;
+    width: 100%;
+    height: 56px;
+}
+
+.menu-second{
+    background-color: #A91717;
+    width: 100%;
+    height: 36px;
+}
+
+.content-area{
+    background-color: #99DDDD;
+    width: 71.5%;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content-title {
+    background-color: #993333;
+    width: 100%;
+    height: 35px;
+    float: left;
+}   
+
+.column--primary{
+    background-color: #DD99DD;
+    width: 67%;
+    height: 100%;
+    float: left;
+}
+
+.column--secundary{
+    background-color: #DDDD99;
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+.content-main{
+    background-color: #22FF66;
+    width: 100%;
+    height: 217px;
+    float: left;
+}
+
+.content-main-title {
+    background-color: #22FFFF;
+    width: 100%;
+    height: 35px;
+    float: left;
+}
+
+.content-main-message {
+    background-color: #00FF00;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.content-main-text {
+    background-color: #2200FF;
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+.content-secundary-title {
+    background-color: #2200FF;
+    width: 100%;
+    height: 35px;
+    float: left;
+}
+
+.content-secundary {
+    background-color: #22BB4B;
+    width: 100%;
+    height: 64px;
+    float: left;
+}
